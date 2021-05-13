@@ -28,7 +28,7 @@ class GracefulKiller:
 
 
 def checar_diferenca(ultimo_valor, valor_atual):
-    valor_minimo = 200
+    valor_minimo = 1
     diferenca = round(abs(valor_atual - ultimo_valor), 2)
 
     aumento = valor_atual - ultimo_valor
@@ -128,6 +128,6 @@ if __name__ == '__main__':
     while not killer.kill_now:
         price_check()
         print("---")  # Separa os logs de cada execução.
-        time.sleep(randint(600, 3600))
+        time.sleep(randint(300, 3600))
 
     print("Parando execução.")
