@@ -28,7 +28,7 @@ class GracefulKiller:
 
 
 def checar_diferenca(ultimo_valor, valor_atual):
-    valor_minimo = 1
+    valor_minimo = 0.2
     diferenca = round(abs(valor_atual - ultimo_valor), 2)
 
     aumento = valor_atual - ultimo_valor
