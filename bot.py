@@ -70,8 +70,7 @@ def price_check():
 
                 valor_reais = Money(str(valor_atual_brl), Currency.BRL). \
                     format('pt_BR')
-                valor_dolar = Money(str(valor_atual_usd)[:4], Currency.USD). \
-                    format('pt_BR')
+                valor_dolar = 'US$ {:,.5f}'.format(valor_atual_usd).replace(',', '|').replace('.', ',').replace('|', '.')
                 hora = datetime.now().strftime('%H:%M')
                 dia = datetime.now().strftime('%d/%m/%Y')
 
